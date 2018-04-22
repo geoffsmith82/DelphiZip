@@ -71,14 +71,19 @@
 			"compiler_max": 29
 			},	
 		{
-			"project": "Packages\\XSeattle\\ZipMaster.groupproj",
+			"project": "Packages\\Seattle\\ZipMaster.groupproj",
 			"compiler_min": 30
 			"compiler_max": 30
 			},	
 		{
-			"project": "Packages\\XBerlin\\ZipMaster.groupproj",
+			"project": "Packages\\Berlin\\ZipMaster.groupproj",
 			"compiler_min": 31
 			"compiler_max": 31			
+		    },
+        {
+			"project": "Packages\\Tokyo\\ZipMaster.groupproj",
+			"compiler_min": 32
+			"compiler_max": 32			
 		}
 		]
 }

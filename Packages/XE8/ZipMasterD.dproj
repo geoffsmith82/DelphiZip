@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{EB4C9EA4-2D0C-410D-AD1B-016164EBA623}</ProjectGuid>
+        <ProjectGuid>{5BB9B8FC-4A9E-4BA2-BB5A-FE8B6A976E7F}</ProjectGuid>
         <MainSource>ZipMasterD.dpk</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
@@ -45,7 +45,7 @@
         <SanitizedProjectName>ZipMasterD</SanitizedProjectName>
         <GenDll>true</GenDll>
         <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
-        <VerInfo_Build>21</VerInfo_Build>
+        <VerInfo_Build>23</VerInfo_Build>
         <DCC_N>false</DCC_N>
         <VerInfo_Locale>3081</VerInfo_Locale>
         <GenPackage>true</GenPackage>
@@ -62,12 +62,12 @@
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
         <DCC_ImageBase>00400000</DCC_ImageBase>
         <DCC_F>false</DCC_F>
-        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;1.9.2.0021;InternalName=ZipMaster;LegalCopyright=Copyright 2016, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMasterD;ProductName=TZipMaster;ProductVersion=1.9.2.0;Comments=;CFBundleName=;CFBundleDisplayName=;CFBundleIdentifier=;CFBundleVersion=;CFBundlePackageType=;CFBundleSignature=;CFBundleAllowMixedLocalizations=;CFBundleExecutable=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;1.9.2.0023;InternalName=ZipMaster;LegalCopyright=Copyright 2017, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMasterD;ProductName=TZipMaster;ProductVersion=1.9.2.0;Comments=;CFBundleName=;CFBundleDisplayName=;CFBundleIdentifier=;CFBundleVersion=;CFBundlePackageType=;CFBundleSignature=;CFBundleAllowMixedLocalizations=;CFBundleExecutable=</VerInfo_Keys>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Build>21</VerInfo_Build>
+        <VerInfo_Build>23</VerInfo_Build>
         <VerInfo_MinorVer>9</VerInfo_MinorVer>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>

@@ -14,7 +14,7 @@ unit ZMFileOpr;
  Copyright (C) 1997-2002 Chris Vleghert and Eric W. Engler
  Copyright (C) 1992-2008 Eric W. Engler
  Copyright (C) 2009, 2010, 2011, 2012, 2013 Russell Peters and Roger Aelbrecht
- Copyright (C) 2014 Russell Peters and Roger Aelbrecht
+ Copyright (C) 2014, 2015, 2016, 2017 Russell Peters and Roger Aelbrecht
 
  All rights reserved.
  For the purposes of Copyright and this license "DelphiZip" is the current
@@ -403,7 +403,7 @@ begin
     Eoc.CentralOffset := 0;
     Eoc.ZipCommentLen := 0;
     SFXBinStream.WriteBuffer(Eoc, Sizeof(Eoc));
-    Result := 0;
+//    Result := 0;
     SFXBinStream.Position := 0;
     Fs := TFileStream.Create(ExeName, FmCreate);
     Result := Fs.CopyFrom(SFXBinStream, SFXBinStream.Size);
@@ -561,7 +561,7 @@ begin
     Result := DriveFolders.ExpandPath(OutArcName, OutFileName);
   if Result >= 0 then
   begin
-    Result := -1;
+//    Result := -1;
     Fd := nil;
     Fs := TZMZipReader.Create(Lister);
     try

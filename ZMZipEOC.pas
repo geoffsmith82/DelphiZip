@@ -8,7 +8,7 @@ unit ZMZipEOC;
  Copyright (C) 1997-2002 Chris Vleghert and Eric W. Engler
  Copyright (C) 1992-2008 Eric W. Engler
  Copyright (C) 2009, 2010, 2011, 2012, 2013 Russell Peters and Roger Aelbrecht
- Copyright (C) 2014 Russell Peters and Roger Aelbrecht
+ Copyright (C) 2014, 2015, 2016, 2017 Russell Peters and Roger Aelbrecht
 
  All rights reserved.
  For the purposes of Copyright and this license "DelphiZip" is the current
@@ -43,7 +43,7 @@ unit ZMZipEOC;
  contact: problems AT delphizip DOT org
  updates: http://www.delphizip.org
  *************************************************************************** *)
-// modified 2013-12-27
+// modified 2017-04-08
 
 {$INCLUDE   '.\ZipVers.inc'}
 {$IFDEF VER180}
@@ -497,7 +497,7 @@ begin
   ASSERT(Clen = ZipCommentLen, ' ZipComment length error');
   Erz := Sizeof(TEOCrecs) + Clen;
   SetLength(Er, Erz + 1);
-  Peoc := @Er[0];
+  Peoc := PEOCrecs(@Er[0]);
   Peoc^.Eoc.HeaderSig := EndCentralDirSig;
   Peoc^.Loc.LocSig := EOC64LocatorSig;
   if Clen > 0 then

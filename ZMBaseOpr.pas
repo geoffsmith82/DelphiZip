@@ -13,7 +13,7 @@ unit ZMBaseOpr;
  Copyright (C) 1997-2002 Chris Vleghert and Eric W. Engler
  Copyright (C) 1992-2008 Eric W. Engler
  Copyright (C) 2009, 2010, 2011, 2012, 2013 Russell Peters and Roger Aelbrecht
- Copyright (C) 2014 Russell Peters and Roger Aelbrecht
+ Copyright (C) 2014, 2015, 2016, 2017 Russell Peters and Roger Aelbrecht
 
  All rights reserved.
  For the purposes of Copyright and this license "DelphiZip" is the current
@@ -580,7 +580,7 @@ var
   SFXMsgFlags: Word;
   Want: Integer;
 begin
-  Result := -ZE_Unknown;
+//  Result := -ZE_Unknown;
   if not CreateStubStream then
   begin
     Result := ZM_Error({_LINE_}589, ZE_Unknown);
@@ -890,7 +890,7 @@ var
   Intermed: TZMZipCopier;
   Res: Integer;
 begin
-  Result := 0;
+//  Result := 0;
   Intermed := TZMZipCopier.Create(Lister);
   try
     if not Intermed.File_CreateTemp(PRE_INTER, '') then

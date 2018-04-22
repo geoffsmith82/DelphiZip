@@ -8,7 +8,7 @@ unit ZMZipReader;
  Copyright (C) 1997-2002 Chris Vleghert and Eric W. Engler
  Copyright (C) 1992-2008 Eric W. Engler
  Copyright (C) 2009, 2010, 2011, 2012, 2013 Russell Peters and Roger Aelbrecht
- Copyright (C) 2014 Russell Peters and Roger Aelbrecht
+ Copyright (C) 2014, 2015, 2016, 2017 Russell Peters and Roger Aelbrecht
 
  All rights reserved.
  For the purposes of Copyright and this license "DelphiZip" is the current

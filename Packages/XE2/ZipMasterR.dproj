@@ -1,6 +1,6 @@
         <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
                 <PropertyGroup>
-                        <ProjectGuid>{2EB14ED2-B972-4BDB-8F15-4C9149E447CC}</ProjectGuid>
+                        <ProjectGuid>{85087952-724B-468C-9102-35E7F3C7C6E7}</ProjectGuid>
                         <MainSource>ZipMasterR.dpk</MainSource>
                         <Base>True</Base>
                         <Config Condition="'$(Config)'==''">Release</Config>
@@ -59,8 +59,8 @@
                         <DCC_ImageBase>00400000</DCC_ImageBase>
                         <DCC_S>false</DCC_S>
                         <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
-                        <VerInfo_Build>21</VerInfo_Build>
-                        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;FileVersion=1.9.2.21;InternalName=TZipMaster;LegalCopyright=Copyright 2016, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMstr;ProductName=ZipMaster;ProductVersion=1.9.2.21;Comments=</VerInfo_Keys>
+                        <VerInfo_Build>23</VerInfo_Build>
+                        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;FileVersion=1.9.2.23;InternalName=TZipMaster;LegalCopyright=Copyright 2017, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMstr;ProductName=ZipMaster;ProductVersion=1.9.2.23;Comments=</VerInfo_Keys>
                 </PropertyGroup>
                 <PropertyGroup Condition="'$(Base_Win64)'!=''">
                         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>

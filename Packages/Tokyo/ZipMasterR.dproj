@@ -1,13 +1,13 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{6A77C1BC-23E2-4333-845E-69B1EDDE07BE}</ProjectGuid>
+        <ProjectGuid>{428F2154-BF2D-4BDC-BFA0-73D42D1AB35A}</ProjectGuid>
         <MainSource>ZipMasterR.dpk</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Package</AppType>
         <FrameworkType>VCL</FrameworkType>
-        <ProjectVersion>18.1</ProjectVersion>
+        <ProjectVersion>18.2</ProjectVersion>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
@@ -43,7 +43,7 @@
         <SanitizedProjectName>ZipMasterR</SanitizedProjectName>
         <DCC_TypedAtParameter>true</DCC_TypedAtParameter>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Build>21</VerInfo_Build>
+        <VerInfo_Build>23</VerInfo_Build>
         <VerInfo_Release>2</VerInfo_Release>
         <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
         <DCC_UnitSearchPath>..\..;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
@@ -56,13 +56,13 @@
         <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
         <GenPackage>true</GenPackage>
         <VerInfo_Locale>3081</VerInfo_Locale>
-        <DllSuffix>23</DllSuffix>
+        <DllSuffix>25</DllSuffix>
         <DCC_Description>Freeware Delphi zip component </DCC_Description>
         <GenDll>true</GenDll>
         <DCC_E>false</DCC_E>
         <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
         <DCC_K>false</DCC_K>
-        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;1.9.2.0021;InternalName=ZipMaster;LegalCopyright=Copyright 2016, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMasterR;ProductName=TZipMaster;ProductVersion=1.9.2;Comments=;CFBundleName=;CFBundleDisplayName=;CFBundleIdentifier=;CFBundleVersion=;CFBundlePackageType=;CFBundleSignature=;CFBundleAllowMixedLocalizations=;CFBundleExecutable=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;1.9.2.0023;InternalName=ZipMaster;LegalCopyright=Copyright 2017, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMasterR;ProductName=TZipMaster;ProductVersion=1.9.2;Comments=;CFBundleName=;CFBundleDisplayName=;CFBundleIdentifier=;CFBundleVersion=;CFBundlePackageType=;CFBundleSignature=;CFBundleAllowMixedLocalizations=;CFBundleExecutable=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_DebugInformation>1</DCC_DebugInformation>

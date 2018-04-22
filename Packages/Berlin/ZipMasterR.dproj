@@ -1,12 +1,12 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{5D9B27EA-0303-4FF2-B134-DCD2C087A8A3}</ProjectGuid>
-        <MainSource>ZipMasterD.dpk</MainSource>
+        <ProjectGuid>{8D26326F-E975-4A01-9EDA-D26AB300D822}</ProjectGuid>
+        <MainSource>ZipMasterR.dpk</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
-        <TargetedPlatforms>1</TargetedPlatforms>
+        <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Package</AppType>
-        <FrameworkType>None</FrameworkType>
+        <FrameworkType>VCL</FrameworkType>
         <ProjectVersion>18.1</ProjectVersion>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
     </PropertyGroup>
@@ -15,6 +15,11 @@
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
         <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
         <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
@@ -34,77 +39,114 @@
         <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
-        <Cfg_2_Win32>true</Cfg_2_Win32>
-        <CfgParent>Cfg_2</CfgParent>
-        <Cfg_2>true</Cfg_2>
-        <Base>true</Base>
-    </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_DebugInformation>0</DCC_DebugInformation>
-        <SanitizedProjectName>ZipMasterD</SanitizedProjectName>
-        <GenDll>true</GenDll>
-        <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
-        <VerInfo_Build>21</VerInfo_Build>
-        <DCC_N>false</DCC_N>
-        <VerInfo_Locale>3081</VerInfo_Locale>
-        <GenPackage>true</GenPackage>
-        <VerInfo_MinorVer>9</VerInfo_MinorVer>
-        <DCC_S>false</DCC_S>
-        <DCC_Description>Freeware Delphi zip component </DCC_Description>
-        <DllSuffix>24</DllSuffix>
-        <VerInfo_Release>2</VerInfo_Release>
-        <DCC_K>false</DCC_K>
-        <DCC_DcuOutput>.\$(Config)</DCC_DcuOutput>
-        <DCC_UnitSearchPath>..\..;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <DesignOnlyPackage>true</DesignOnlyPackage>
-        <DCC_E>false</DCC_E>
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
-        <DCC_ImageBase>00400000</DCC_ImageBase>
-        <DCC_F>false</DCC_F>
-        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;1.9.2.0021;InternalName=ZipMaster;LegalCopyright=Copyright 2016, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMasterD;ProductName=TZipMaster;ProductVersion=1.9.2.0;Comments=;CFBundleName=;CFBundleDisplayName=;CFBundleIdentifier=;CFBundleVersion=;CFBundlePackageType=;CFBundleSignature=;CFBundleAllowMixedLocalizations=;CFBundleExecutable=</VerInfo_Keys>
+        <SanitizedProjectName>ZipMasterR</SanitizedProjectName>
+        <DCC_TypedAtParameter>true</DCC_TypedAtParameter>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Build>23</VerInfo_Build>
+        <VerInfo_Release>2</VerInfo_Release>
+        <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+        <DCC_UnitSearchPath>..\..;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <VerInfo_MinorVer>9</VerInfo_MinorVer>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_N>false</DCC_N>
+        <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
+        <GenPackage>true</GenPackage>
+        <VerInfo_Locale>3081</VerInfo_Locale>
+        <DllSuffix>24</DllSuffix>
+        <DCC_Description>Freeware Delphi zip component </DCC_Description>
+        <GenDll>true</GenDll>
+        <DCC_E>false</DCC_E>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_K>false</DCC_K>
+        <VerInfo_Keys>CompanyName=DelphiZip;FileDescription=Freeware Delphi zip component;1.9.2.0023;InternalName=ZipMaster;LegalCopyright=Copyright 2017, Russell Peters;LegalTrademarks=;OriginalFilename=ZipMasterR;ProductName=TZipMaster;ProductVersion=1.9.2;Comments=;CFBundleName=;CFBundleDisplayName=;CFBundleIdentifier=;CFBundleVersion=;CFBundlePackageType=;CFBundleSignature=;CFBundleAllowMixedLocalizations=;CFBundleExecutable=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_DebugInformation>1</DCC_DebugInformation>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Build>21</VerInfo_Build>
-        <VerInfo_MinorVer>9</VerInfo_MinorVer>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
-        <VerInfo_Release>2</VerInfo_Release>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
         <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
         <DCC_DebugInformation>false</DCC_DebugInformation>
-        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <DCC_DebugInformation>0</DCC_DebugInformation>
-        <VerInfo_Build>0</VerInfo_Build>
-        <VerInfo_MinorVer>0</VerInfo_MinorVer>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Release>0</VerInfo_Release>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
         <DCC_Optimize>false</DCC_Optimize>
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-    </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\Zipmaster.dcr"/>
-        <DCCReference Include="DesignIDE.dcp"/>
-        <DCCReference Include="ZipMasterR.dcp"/>
-        <DCCReference Include="..\..\ZMReg.pas"/>
+        <DCCReference Include="vcl.dcp"/>
+        <DCCReference Include="vclx.dcp"/>
+                        <DCCReference Include="..\..\ZipMstr.pas"/>
+                        <DCCReference Include="..\..\ZMArgSplit.pas"/>
+                        <DCCReference Include="..\..\ZMBaseOpr.pas"/>
+                        <DCCReference Include="..\..\ZMBody.pas"/>
+                        <DCCReference Include="..\..\ZMCoDec.pas"/>
+                        <DCCReference Include="..\..\ZMCommand.pas"/>
+                        <DCCReference Include="..\..\ZMCompat.pas"/>
+                        <DCCReference Include="..\..\ZMCore.pas"/>
+                        <DCCReference Include="..\..\ZMCRC.pas"/>
+                        <DCCReference Include="..\..\ZMCtx.pas"/>
+                        <DCCReference Include="..\..\ZMDelZip.pas"/>
+                        <DCCReference Include="..\..\ZMDlg.pas"/>
+                        <DCCReference Include="..\..\ZMDllLoad.pas"/>
+                        <DCCReference Include="..\..\ZMDrv.pas"/>
+                        <DCCReference Include="..\..\ZMEngine.pas"/>
+                        <DCCReference Include="..\..\ZMEntryReader.pas"/>
+                        <DCCReference Include="..\..\ZMFileOpr.pas"/>
+                        <DCCReference Include="..\..\ZMFStream.pas"/>
+                        <DCCReference Include="..\..\ZMHandler.pas"/>
+                        <DCCReference Include="..\..\ZMLister.pas"/>
+                        <DCCReference Include="..\..\ZMMatch.pas"/>
+                        <DCCReference Include="..\..\ZMMFStream.pas"/>
+                        <DCCReference Include="..\..\ZMMisc.pas"/>
+                        <DCCReference Include="..\..\ZMMsg.pas"/>
+                        <DCCReference Include="..\..\ZMOprCore.pas"/>
+                        <DCCReference Include="..\..\ZMOprDeflate.pas"/>
+                        <DCCReference Include="..\..\ZMOprDel.pas"/>
+                        <DCCReference Include="..\..\ZMOprDll.pas"/>
+                        <DCCReference Include="..\..\ZMOprFile.pas"/>
+                        <DCCReference Include="..\..\ZMOprMerge.pas"/>
+                        <DCCReference Include="..\..\ZMOprMod.pas"/>
+                        <DCCReference Include="..\..\ZMOprMsgStr.pas"/>
+                        <DCCReference Include="..\..\ZMOprUnzip.pas"/>
+                        <DCCReference Include="..\..\ZMSFXInt.pas"/>
+                        <DCCReference Include="..\..\ZMStructs.pas"/>
+                        <DCCReference Include="..\..\ZMUnzipOpr.pas"/>
+                        <DCCReference Include="..\..\ZMUTF8.pas"/>
+                        <DCCReference Include="..\..\ZMUtils.pas"/>
+                        <DCCReference Include="..\..\ZMWinFuncs.pas"/>
+                        <DCCReference Include="..\..\ZMXcpt.pas"/>
+                        <DCCReference Include="..\..\ZMZipBase.pas"/>
+                        <DCCReference Include="..\..\ZMZipDirectory.pas"/>
+                        <DCCReference Include="..\..\ZMZipEOC.pas"/>
+                        <DCCReference Include="..\..\ZMZipMulti.pas"/>
+                        <DCCReference Include="..\..\ZMZipReader.pas"/>
+                        <DCCReference Include="..\..\ZMZipWriter.pas"/>
+                        <DCCReference Include="..\..\ZMZLibExApi.pas"/>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -123,7 +165,7 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">ZipMasterD.dpk</Source>
+                    <Source Name="MainSource">ZipMasterR.dpk</Source>
                 </Source>
                 <VersionInfo>
                     <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
@@ -161,6 +203,8 @@
                     <VersionInfoKeys Name="CFBundleExecutable"/>
                 </VersionInfoKeys>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclFMXtee9200.bpl">TeeChart Lite FMX Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcltee9200.bpl">TeeChart Standard VCL Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclDataSnapClient200.bpl">Embarcadero DBExpress DataSnap Client Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclDataSnapProviderClient200.bpl">Embarcadero DBExpress DataSnap Provider Client Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k200.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
@@ -168,9 +212,8 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>
-                <Platform value="OSX32">False</Platform>
                 <Platform value="Win32">True</Platform>
-                <Platform value="Win64">False</Platform>
+                <Platform value="Win64">True</Platform>
             </Platforms>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>

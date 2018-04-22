@@ -8,7 +8,7 @@ unit ZipMstr;
  Copyright (C) 1997-2002 Chris Vleghert and Eric W. Engler
  Copyright (C) 1992-2008 Eric W. Engler
  Copyright (C) 2009, 2010, 2011, 2012, 2013 Russell Peters and Roger Aelbrecht
- Copyright (C) 2014 Russell Peters and Roger Aelbrecht
+ Copyright (C) 2014, 2015, 2016, 2017 Russell Peters and Roger Aelbrecht
 
  All rights reserved.
  For the purposes of Copyright and this license "DelphiZip" is the current
@@ -60,9 +60,9 @@ uses
   ZMHandler;
 
 const
-  ZIPMASTERBUILD: string =  '1.9.2.0022';
-  ZIPMASTERDATE: string =  '22/04/2016';
-  ZIPMASTERPRIV: Integer = 1920022;
+  ZIPMASTERBUILD: string =  '1.9.2.0023';
+  ZIPMASTERDATE: string =  '8/04/2017';
+  ZIPMASTERPRIV: Integer = 1920023;
   DELZIPVERSION = 192;
   MIN_DLL_BUILD = 1920002;
 

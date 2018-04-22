@@ -1,6 +1,6 @@
         <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
                 <PropertyGroup>
-                        <ProjectGuid>{1C4C1DFE-F778-42A8-BF9D-F9F7195AB3F1}</ProjectGuid>
+                        <ProjectGuid>{BAF38702-D9E6-4D87-AB71-70A18582ED85}</ProjectGuid>
                         <MainSource>ZipMasterD.dpk</MainSource>
                         <Base>True</Base>
                         <Config Condition="'$(Config)'==''">Debug</Config>
@@ -90,7 +90,7 @@
                                                 <VersionInfo Name="MajorVer">1</VersionInfo>
                                                 <VersionInfo Name="MinorVer">9</VersionInfo>
                                                 <VersionInfo Name="Release">2</VersionInfo>
-                                                <VersionInfo Name="Build">21</VersionInfo>
+                                                <VersionInfo Name="Build">23</VersionInfo>
                                                 <VersionInfo Name="Debug">False</VersionInfo>
                                                 <VersionInfo Name="PreRelease">False</VersionInfo>
                                                 <VersionInfo Name="Special">False</VersionInfo>
@@ -102,7 +102,7 @@
                                         <VersionInfoKeys>
                                                 <VersionInfoKeys Name="CompanyName">DelphiZip</VersionInfoKeys>
                                                 <VersionInfoKeys Name="FileDescription">Freeware Delphi zip component</VersionInfoKeys>
-                                                <VersionInfoKeys Name="FileVersion">1.9.2.21</VersionInfoKeys>
+                                                <VersionInfoKeys Name="FileVersion">1.9.2.23</VersionInfoKeys>
                                                 <VersionInfoKeys Name="InternalName">TZipMaster</VersionInfoKeys>
                                                 <VersionInfoKeys Name="LegalCopyright">Copyright 2012, 2013 Russell Peters</VersionInfoKeys>
                                                 <VersionInfoKeys Name="LegalTrademarks"/>

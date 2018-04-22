@@ -8,7 +8,7 @@ unit ZMCoDec;
  Copyright (C) 1997-2002 Chris Vleghert and Eric W. Engler
  Copyright (C) 1992-2008 Eric W. Engler
  Copyright (C) 2009, 2010, 2011, 2012, 2013 Russell Peters and Roger Aelbrecht
- Copyright (C) 2014 Russell Peters and Roger Aelbrecht
+ Copyright (C) 2014, 2015, 2016, 2017 Russell Peters and Roger Aelbrecht
 
  All rights reserved.
  For the purposes of Copyright and this license "DelphiZip" is the current
@@ -205,6 +205,21 @@ begin
 end;
 
 function ZLibToZMError(Code: Integer): Integer;
+const ZErrors: array [0..5] of Integer =
+   (ZZ_ZLibFile, ZZ_ZLibStream, ZZ_ZLibData, ZZ_ZLibNoMem,
+    ZZ_ZLibUnknown {ZZ_ZLibBuf}, ZZ_ZLibIncompatible);
+begin
+  Result := 0;
+  if Code < 0 then
+  begin
+    if Code >= Z_VERSION_ERROR then
+      Result := ZErrors[(-Code) - 1]
+    else
+      Result := ZZ_ZLibUnknown;
+  end;
+end;
+(*
+function ZLibToZMError(Code: Integer): Integer;
 begin
   Result := 0;
   if Code < 0 then
@@ -213,7 +228,7 @@ begin
     if Result > ZZ_ZLibUnknown then
       Result := ZZ_ZLibUnknown;
   end;
-end;
+end; *)
 
 { ** zlib deflate routines *********************************************************************** }
 

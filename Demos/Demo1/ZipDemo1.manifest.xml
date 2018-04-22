@@ -4,7 +4,7 @@
     type="win32"
     processorArchitecture="x86"
     name="ZipDemo1"
-    version="1.9.2.5" />
+    version="1.9.2.23" />
     <description>DelphiZip.$(TZipMaster$ZF) demo</description>
  <dependency>
    <dependentAssembly>
